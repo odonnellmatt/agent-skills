@@ -1,0 +1,86 @@
+{
+  "$schema": "workflow-state-v1",
+  "$comment": "Template — replace all [PLACEHOLDER] values. Remove this comment.",
+  "workflow": {
+    "id": "[auto-generated UUID]",
+    "type": "[workflow-type-identifier]",
+    "title": "[Human-readable title from user]",
+    "created_at": "[ISO-8601 timestamp]",
+    "last_updated": "[ISO-8601 timestamp]"
+  },
+  "progress": {
+    "current_phase": 1,
+    "current_step": "1.1",
+    "phases_completed": [],
+    "gates_passed": [],
+    "status": "in_progress",
+    "status_options": ["not_started", "in_progress", "paused", "completed", "failed"]
+  },
+  "artifacts": {
+    "by_phase": {
+      "phase_1": {},
+      "phase_2": {},
+      "phase_3": {}
+    },
+    "primary_output": null,
+    "artifact_schema": {
+      "path": "[relative path to artifact]",
+      "created_at": "[ISO-8601 timestamp]",
+      "hash": "[sha256 hash for reproducibility]",
+      "type": "[markdown | json | docx | csv | png]"
+    }
+  },
+  "decisions": [
+    {
+      "id": 1,
+      "timestamp": "[ISO-8601]",
+      "phase": 1,
+      "step": "1.1",
+      "decision": "[What was decided]",
+      "rationale": "[Why this choice was made]",
+      "alternatives_considered": ["[option A]", "[option B]"],
+      "approved_by": "[human | automated]"
+    }
+  ],
+  "quality_gates": {
+    "QG1": {
+      "status": "not_checked",
+      "status_options": ["not_checked", "passed", "failed", "skipped"],
+      "checked_at": null,
+      "automated_results": {},
+      "human_approved": false,
+      "notes": null
+    }
+  },
+  "metrics": {
+    "$comment": "Workflow-specific metrics accumulated during execution"
+  },
+  "feedback_log": [
+    {
+      "timestamp": "[ISO-8601]",
+      "detected_at": "[phase_N or skill_name]",
+      "routed_to": "[phase_N or skill_name]",
+      "issue": "[Description of the issue]",
+      "severity": "[blocking | warning | info]",
+      "resolution": null,
+      "resolved_at": null
+    }
+  ],
+  "configuration": {
+    "output_format": "[docx | md | pdf | csv]",
+    "quality_thresholds": {
+      "$comment": "Define minimum thresholds for automated quality gates"
+    },
+    "user_preferences": {
+      "$comment": "Captured from user during Phase 1"
+    }
+  },
+  "session_log": [
+    {
+      "session_start": "[ISO-8601]",
+      "session_end": "[ISO-8601]",
+      "phases_worked": [1],
+      "notes": "[Brief session summary for handoff]"
+    }
+  ]
+}

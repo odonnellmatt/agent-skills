@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Creator Pro"
+  short_description: "Production-grade multi-phase skill builder"
+  default_prompt: "Use $skill-creator-pro to design a production-grade multi-phase skill with quality gates, deterministic scripts, and validation loops."
